@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="CRUD Operations Create Read Update Delete Search"
+    />
+    <meta
+      name="keywords"
+      content="CRUD Operations Create Read Update Delete Search"
+    />
+    <meta name="author" content="ASHOUR ALI" />
+    <title>CRUD</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="icon-fixed">
+      <span class="position-fixed top-0 end-0 m-3 z-3">
+        <i role="button" id="mode" class="fa-regular fa-sun fa-xl p-3"></i>
+      </span>
+      <span id="language" class="position-fixed top-0 start-0 m-3 z-3">
+        <i
+          role="button"
+          id="languageToggle"
+          class="fa-solid fa-language fa-xl p-3"
+        ></i>
+      </span>
+    </nav>
+
+    <header class="title text-center py-3 pt-5">
+      <h1 id="headerTitle">CRUD Operations</h1>
+      <p id="headerDescription" class="lead">Product Management System</p>
+    </header>
+
+    <section>
+      <div class="container">
+        <div class="row g-1">
+          <div class="col-md-12">
+            <div class="input-group">
+              <input type="text" id="title" class="effect-4" placeholder=" " />
+              <label for="title" id="titleLabel">Product Name</label>
+              <div class="error-message" id="titleError"></div>
+            </div>
+          </div>
+          <div
+            class="total-prices d-flex align-items-center justify-content-between"
+          >
+            <div class="col-md-2">
+              <div class="input-group">
+                <input
+                  type="number"
+                  id="price"
+                  class="effect-4"
+                  placeholder=" "
+                />
+                <label for="price" id="priceLabel">Product Price</label>
+                <div class="error-message" id="priceError"></div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="input-group">
+                <input
+                  type="number"
+                  id="taxes"
+                  class="effect-4"
+                  placeholder=" "
+                />
+                <label for="taxes" id="taxesLabel">Product Taxes</label>
+                <div class="error-message" id="taxesError"></div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="input-group">
+                <input
+                  type="number"
+                  id="ads"
+                  class="effect-4"
+                  placeholder=" "
+                />
+                <label for="ads" id="adsLabel">Product Ads</label>
+                <div class="error-message" id="adsError"></div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="input-group">
+                <input
+                  type="number"
+                  id="discount"
+                  class="effect-4"
+                  placeholder=" "
+                />
+                <label for="discount" id="discountLabel"
+                  >Product Discount</label
+                >
+                <div class="error-message" id="discountError"></div>
+
+                <span class="percentage-sign">%</span>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <small id="total" class="text-center"></small>
+            </div>
+          </div>
+          <div class="countDev col-md-6">
+            <div class="input-group">
+              <input
+                type="number"
+                id="count"
+                class="effect-4"
+                placeholder=" "
+              />
+              <label for="count" id="countLabel">Product Count</label>
+              <div class="error-message" id="countError"></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="input-group">
+              <input
+                type="text"
+                id="category"
+                class="effect-4"
+                placeholder=" "
+              />
+              <label for="category" id="categoryLabel">Product Category</label>
+              <div class="error-message" id="categoryError"></div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between align-items-center">
+            <button type="submit" id="create">Create</button>
+
+            <button type="submit" id="clear">Clear Inputs</button>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="input-group">
+            <input type="text" name="search" id="search" class="effect-7" />
+          </div>
+        </div>
+        <div class="search-by">
+          <button type="submit" id="searchByTitle">Search By Title</button>
+          <button type="submit" id="searchByCategory">
+            Search By Category
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Add this div somewhere in your HTML to show error messages -->
+    <div id="errorMessages" style="color: red; display: none"></div>
+    <div class="deleteAll text-center mt-3"></div>
+    <section class="py-4 table">
+      <div class="container">
+        <div class="row">
+          <table>
+            <thead id="tableHeader">
+              <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>price</th>
+                <th>taxes</th>
+                <th>ads</th>
+                <th>discount</th>
+                <th>total</th>
+                <th>category</th>
+                <th>update</th>
+                <th>delete</th>
+              </tr>
+            </thead>
+            <tbody id="rowData"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-3">
+      <div class="footer text-center">
+        <p id="footer-info" class="lead">
+          Designed And Developed By <span class="author"> Ashour Ali</span>
+        </p>
+      </div>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

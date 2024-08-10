@@ -1,0 +1,373 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/***** theme customize *****/
+[data-theme="light"] {
+  --main-color: #f9f9f9;
+  --seconde-color: #4287ff;
+  --color-text: #000000;
+  --bg-main: #fff;
+  --bg-color-input: #646464;
+  --therd-color: #8fb7fc;
+}
+
+[data-theme="dark"] {
+  --main-color: #2a2a2a;
+  --seconde-color: #4d8dff;
+  --color-text: #fff;
+  --bg-main: #1c1c1d;
+  --bg-color-input: #a2a2a2;
+  --therd-color: #2e4c80;
+}
+
+.main-btn {
+  background-color: var(--btn-main-color);
+  color: var(--color-text);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+
+* {
+  -webkit-transition: background-color 0.5s, color 0.2s;
+  -o-transition: background-color 0.5s, color 0.2s;
+  transition: background-color 0.5s, color 0.2s;
+}
+
+body {
+  font-family: "Comfortaa", sans-serif;
+  min-height: 100%;
+  min-width: 100%;
+  background-color: var(--main-color);
+  color: var(--color-text);
+}
+
+h1,
+h2 {
+  font-family: "Comfortaa", sans-serif;
+  color: var(--color-text) !important;
+}
+
+a,
+p,
+span {
+  color: inherit !important;
+}
+
+ul {
+  list-style-position: inside;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+.title h1 {
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  font-weight: 700;
+}
+.title p {
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+.input-group {
+  position: relative;
+  margin: 1.5rem 0;
+}
+
+input {
+  border: none;
+  outline: none;
+  padding: 0.4rem;
+  font-size: 1.4rem;
+  width: 100%;
+}
+
+/* Effect 4 */
+.effect-4 {
+  border-radius: 0.25rem;
+  background-color: var(--bg-color-input);
+  color: #fff;
+}
+
+.effect-4 + label {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0.75rem;
+  color: var(--bg-main);
+  padding: 0 0.125rem;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+html[lang="ar"] .effect-4 + label {
+  left: auto;
+  right: 0.75rem; /* الموضع للغة العربية */
+}
+.effect-4:focus {
+  border-color: var(--border-color);
+}
+
+.effect-4:not(:-moz-placeholder-shown) + label {
+  top: 0;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+  background-color: var(--main-color);
+  color: var(--color-text);
+  padding-inline: 20px;
+}
+
+.effect-4:not(:-ms-input-placeholder) + label {
+  top: 0;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+  background-color: var(--main-color);
+  color: var(--color-text);
+  padding-inline: 20px;
+}
+
+.effect-4:focus + label,
+.effect-4:not(:placeholder-shown) + label {
+  top: 0;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  background-color: var(--main-color);
+  color: var(--color-text);
+  padding-inline: 20px;
+}
+
+#total {
+  background-color: rgb(106, 0, 0);
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+#total::before {
+  content: "Total : ";
+}
+#create {
+  width: 74%;
+  background-color: var(--therd-color);
+  color: var(--color-text);
+  padding: 10px 25px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  -webkit-transition: letter-spacing 0.3s, background-color 0.3s;
+  -o-transition: letter-spacing 0.3s, background-color 0.3s;
+  transition: letter-spacing 0.3s, background-color 0.3s;
+}
+#create:hover {
+  letter-spacing: 3px;
+  background-color: var(--seconde-color);
+}
+#clear {
+  width: 25%;
+  font-size: 14px;
+  background-color: rgb(106, 0, 0);
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  -webkit-transition: letter-spacing 0.3s, background-color 0.3s;
+  -o-transition: letter-spacing 0.3s, background-color 0.3s;
+  transition: letter-spacing 0.3s, background-color 0.3s;
+}
+#clear:hover {
+  letter-spacing: 2px;
+  background-color: rgb(76, 0, 0);
+}
+/* Effect 7 */
+.effect-7 {
+  color: var(--color-text);
+  border: 2px solid var(--therd-color);
+  border-radius: 0.25rem;
+  background: url("../assets/search-icon.png") no-repeat 5px;
+  background-size: 2.1875rem;
+  padding-left: 45px;
+}
+
+.effect-7:focus {
+  border-color: var(--seconde-color);
+  background-image: url("../assets/search-icon2.png");
+}
+html[lang="ar"] .effect-7 {
+  background-position: right 5px center; /* نقل الأيقونة إلى اليمين في حالة اللغة العربية */
+  padding-left: 0; /* إزالة padding من اليسار في اللغة العربية */
+  padding-right: 45px; /* إضافة padding على اليمين */
+}
+.search-by {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.search-by button {
+  font-size: 14px;
+  width: 49%;
+  background-color: var(--therd-color);
+  color: var(--color-text);
+  padding: 10px 25px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  -webkit-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.search-by button:hover {
+  background-color: var(--seconde-color);
+}
+
+table {
+  color: var(--color-text);
+  background-color: var(--main-color);
+  text-align: center;
+  overflow-x: auto;
+}
+tr {
+  -webkit-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  padding: 4px 2px;
+  border-bottom: 2px solid var(--bg-color-input);
+}
+th {
+  text-transform: uppercase;
+}
+td button {
+  text-transform: capitalize;
+}
+th,
+td {
+  padding: 4px 2px;
+  margin: 4px 2px;
+  border: 2px solid var(--bg-color-input);
+}
+.table {
+  overflow-x: auto;
+}
+tr:hover {
+  background-color: var(--seconde-color);
+}
+
+@media screen and (max-width: 768px) {
+  .total-prices {
+    width: 100%;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+    align-items: center;
+    gap: 8px;
+  }
+  .total-prices .col-md-2 {
+    width: 48%;
+    text-align: center;
+  }
+
+  .total {
+    text-align: center;
+  }
+  #clear {
+    padding: 12px 9px;
+  }
+  #clear:hover {
+    padding: 12px 8px;
+    letter-spacing: 0;
+  }
+}
+
+.input-group {
+  position: relative;
+}
+
+.percentage-sign {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 10px; /* الموضع الافتراضي على اليمين في حالة اللغة الإنجليزية */
+  font-size: 1rem;
+  color: #ffffff !important;
+  pointer-events: none; /* منع التفاعل مع العنصر */
+}
+
+html[lang="ar"] .percentage-sign {
+  right: auto;
+  left: 10px; /* نقل الموضع إلى اليسار في حالة اللغة العربية */
+}
+#deleteAll {
+  width: 75%;
+  padding: 12px 0px;
+  margin-inline: auto;
+  background-color: rgb(106, 0, 0);
+  color: var(--color-text);
+  text-transform: capitalize;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  letter-spacing: 2px;
+  -webkit-transition: letter-spacing 0.5s, background-color 0.5s;
+  -o-transition: letter-spacing 0.5s, background-color 0.5s;
+  transition: letter-spacing 0.5s, background-color 0.5s;
+}
+
+#deleteAll:hover {
+  letter-spacing: 4px;
+  background-color: rgb(76, 0, 0);
+}
+
+.error-message {
+  color: rgb(155, 0, 0);
+  font-size: 12px;
+  margin-top: 5px;
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+  background-color: #ffe6e6;
+  padding: 5px;
+  border-radius: 4px;
+  width: 100%;
+  padding: 8px 4px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.footer p {
+  color: var(--color-text);
+  letter-spacing: 2px;
+}
+.author {
+  color: var(--seconde-color) !important;
+  letter-spacing: 4px;
+}
